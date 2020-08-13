@@ -1,0 +1,1 @@
+[21-Jun-2020 08:58:22 UTC] PHP Fatal error:  session_start(): Failed to initialize storage module: user (path: ) in /home/pulaucod/aspekindo1.pulaucoding.com/system/libraries/Session/Session.php on line 143
