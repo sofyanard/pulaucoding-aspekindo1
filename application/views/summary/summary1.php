@@ -6,6 +6,10 @@
         <h5><a href="<?= base_url('summary/summary1'); ?>">Jumlah Anggota Berdasarkan Propinsi</a></h5>
     </p>
 
+    <p>
+        <div id="chart_div"></div>
+    </p>
+
     <table class="table">
         <thead class="thead-dark">
             <tr>

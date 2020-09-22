@@ -31,6 +31,10 @@
     </form>
 
     <p>
+        <div id="chart_div"></div>
+    </p>
+
+    <p>
         <h5>
         <?php
             if (($propinsiname != NULL) && ($propinsiname != '')) { echo 'Propinsi : '.$propinsiname; }

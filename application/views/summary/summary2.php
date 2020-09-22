@@ -23,6 +23,10 @@
         </div>
     </form>
 
+    <p>
+        <div id="chart_div"></div>
+    </p>
+
     <table class="table">
         <thead class="thead-dark">
             <tr>

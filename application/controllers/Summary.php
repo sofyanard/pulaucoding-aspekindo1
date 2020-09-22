@@ -53,8 +53,29 @@ class Summary extends CI_Controller
         $result = $this->db->get()->result_array();
         $data['result'] = $result;
 
+        // Chart
+        $chart_data_table = array();
+        $chart_data_table_others = array();
+        $jumlah_others = 0;
+        $result_length = count($result);
+        if ($result_length <= 5) {
+            $chart_data_table = $result;
+        } else {
+            for ($x = 0; $x < 5; $x++) {
+                $chart_data_table[$x] = $result[$x];
+            }
+            for ($x = 5; $x < $result_length; $x++) {
+                $jumlah_others += (int)$result[$x]['Jumlah'];
+            }
+            $chart_data_table_others['PropinsiId'] = 'XX';
+            $chart_data_table_others['Propinsi'] = 'Others';
+            $chart_data_table_others['Jumlah'] = $jumlah_others;
+            array_push($chart_data_table, $chart_data_table_others);
+        }
+        $data['chart_data_table'] = $chart_data_table;
+
         $data['title'] = 'Summary';
-        $this->load->view('templates/header', $data);
+        $this->load->view('summary/summary1header', $data);
         $this->load->view('summary/summary1', $data);
         $this->load->view('templates/footer');
     }
@@ -102,8 +123,29 @@ class Summary extends CI_Controller
         $result = $this->db->get()->result_array();
         $data['result'] = $result;
 
+        // Chart
+        $chart_data_table = array();
+        $chart_data_table_others = array();
+        $jumlah_others = 0;
+        $result_length = count($result);
+        if ($result_length <= 5) {
+            $chart_data_table = $result;
+        } else {
+            for ($x = 0; $x < 5; $x++) {
+                $chart_data_table[$x] = $result[$x];
+            }
+            for ($x = 5; $x < $result_length; $x++) {
+                $jumlah_others += (int)$result[$x]['Jumlah'];
+            }
+            $chart_data_table_others['KotaId'] = 'XX';
+            $chart_data_table_others['KotaName'] = 'Others';
+            $chart_data_table_others['Jumlah'] = $jumlah_others;
+            array_push($chart_data_table, $chart_data_table_others);
+        }
+        $data['chart_data_table'] = $chart_data_table;
+
         $data['title'] = 'Summary';
-        $this->load->view('templates/header', $data);
+        $this->load->view('summary/summary2header', $data);
         $this->load->view('summary/summary2', $data);
         $this->load->view('templates/footer');
     }
@@ -152,8 +194,29 @@ class Summary extends CI_Controller
             $data['kotaname'] = '';
         }
 
+        // Chart
+        $chart_data_table = array();
+        $chart_data_table_others = array();
+        $jumlah_others = 0;
+        $result_length = count($result);
+        if ($result_length <= 5) {
+            $chart_data_table = $result;
+        } else {
+            for ($x = 0; $x < 5; $x++) {
+                $chart_data_table[$x] = $result[$x];
+            }
+            for ($x = 5; $x < $result_length; $x++) {
+                $jumlah_others += (int)$result[$x]['Jumlah'];
+            }
+            $chart_data_table_others['TipeBUCode'] = 'XX';
+            $chart_data_table_others['TipeBUName'] = 'Others';
+            $chart_data_table_others['Jumlah'] = $jumlah_others;
+            array_push($chart_data_table, $chart_data_table_others);
+        }
+        $data['chart_data_table'] = $chart_data_table;
+
         $data['title'] = 'Summary';
-        $this->load->view('templates/header', $data);
+        $this->load->view('summary/summary3header', $data);
         $this->load->view('summary/summary3', $data);
         $this->load->view('templates/footerbegin');
         $this->load->view('anggota/indexscript');
@@ -264,8 +327,29 @@ class Summary extends CI_Controller
             $data['kotaname'] = '';
         }
 
+        // Chart
+        $chart_data_table = array();
+        $chart_data_table_others = array();
+        $jumlah_others = 0;
+        $result_length = count($result);
+        if ($result_length <= 5) {
+            $chart_data_table = $result;
+        } else {
+            for ($x = 0; $x < 5; $x++) {
+                $chart_data_table[$x] = $result[$x];
+            }
+            for ($x = 5; $x < $result_length; $x++) {
+                $jumlah_others += (int)$result[$x]['Jumlah'];
+            }
+            $chart_data_table_others['GradeCode'] = 'XX';
+            $chart_data_table_others['GradeName'] = 'Others';
+            $chart_data_table_others['Jumlah'] = $jumlah_others;
+            array_push($chart_data_table, $chart_data_table_others);
+        }
+        $data['chart_data_table'] = $chart_data_table;
+
         $data['title'] = 'Summary';
-        $this->load->view('templates/header', $data);
+        $this->load->view('summary/summary4header', $data);
         $this->load->view('summary/summary4', $data);
         $this->load->view('templates/footerbegin');
         $this->load->view('anggota/indexscript');
@@ -329,8 +413,29 @@ class Summary extends CI_Controller
             $data['kotaname'] = '';
         }
 
+        // Chart
+        $chart_data_table = array();
+        $chart_data_table_others = array();
+        $jumlah_others = 0;
+        $result_length = count($result);
+        if ($result_length <= 5) {
+            $chart_data_table = $result;
+        } else {
+            for ($x = 0; $x < 5; $x++) {
+                $chart_data_table[$x] = $result[$x];
+            }
+            for ($x = 5; $x < $result_length; $x++) {
+                $jumlah_others += (int)$result[$x]['Jumlah'];
+            }
+            $chart_data_table_others['SubBidangCode'] = 'XX';
+            $chart_data_table_others['SubBidangName'] = 'Others';
+            $chart_data_table_others['Jumlah'] = $jumlah_others;
+            array_push($chart_data_table, $chart_data_table_others);
+        }
+        $data['chart_data_table'] = $chart_data_table;
+
         $data['title'] = 'Summary';
-        $this->load->view('templates/header', $data);
+        $this->load->view('summary/summary5header', $data);
         $this->load->view('summary/summary5', $data);
         $this->load->view('templates/footerbegin');
         $this->load->view('anggota/indexscript');
